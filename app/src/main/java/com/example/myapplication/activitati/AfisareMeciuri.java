@@ -7,10 +7,9 @@ import android.widget.ListView;
 
 import com.example.myapplication.R;
 import com.example.myapplication.adaptors.MeciAdaptor;
-import com.example.myapplication.model.Scor;
+import com.example.myapplication.model.example.Scor;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class AfisareMeciuri extends AppCompatActivity {
     ListView listView;

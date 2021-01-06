@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".activitati.JsonActivity"></activity>
+        <activity android:name=".activitati.HomeActivity"></activity>
+        <activity android:name=".activitati.JsonActivity" />
         <activity android:name=".activitati.AfisareMeciuri" />
         <activity android:name=".activitati.Activity2" />
-        <activity android:name=".activitati.MainActivity">
+        <activity android:name=".activitati.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

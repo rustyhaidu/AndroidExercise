@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.myapplication.R;
-import com.example.myapplication.model.Scor;
+import com.example.myapplication.model.example.Scor;
 
 import java.util.ArrayList;
 

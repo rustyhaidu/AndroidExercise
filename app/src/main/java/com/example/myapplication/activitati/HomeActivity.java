@@ -2,7 +2,9 @@ package com.example.myapplication.activitati;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +15,7 @@ import com.example.myapplication.R;
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
     Button pressMe;
     Button nextActivity;
     Button jsonActivity;
@@ -31,12 +33,16 @@ public class MainActivity extends AppCompatActivity {
         editText = findViewById(R.id.editText);
         jsonActivity = findViewById(R.id.jsonButton);
 
+
+
         pressMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Random random = new Random();
                 int nrRandom = random.nextInt(1000);
                 label.setText("Numar: " + nrRandom);
+
+
             }
         });
 

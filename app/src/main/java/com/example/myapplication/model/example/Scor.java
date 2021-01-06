@@ -1,4 +1,4 @@
-package com.example.myapplication.model;
+package com.example.myapplication.model.example;
 
 public class Scor {
     private String echipa1;

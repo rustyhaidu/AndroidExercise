@@ -8,12 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.myapplication.R;
-import com.example.myapplication.model.Scor;
+import com.example.myapplication.model.example.Scor;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Activity2 extends AppCompatActivity {
     TextView textView;
@@ -47,8 +47,13 @@ public class Activity2 extends AppCompatActivity {
                 String echipa2Text = echipa2.getText().toString();
                 String scorText = scorul.getText().toString();
 
-                Scor scor = new Scor(echipa1Text, echipa2Text, scorText);
-                scoruri.add(scor);
+                if (echipa1Text.isEmpty() || echipa2Text.isEmpty() || scorText.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Compleaaza toate field-urile", Toast.LENGTH_SHORT).show();
+                } else {
+                    Scor scor = new Scor(echipa1Text, echipa2Text, scorText);
+                    scoruri.add(scor);
+                }
+
             }
         });
 

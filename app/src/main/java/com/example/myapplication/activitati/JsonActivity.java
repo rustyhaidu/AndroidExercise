@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
+import com.example.myapplication.model.example.Order;
+import com.google.gson.Gson;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,8 +22,12 @@ public class JsonActivity extends AppCompatActivity {
         setContentView(R.layout.activity_json);
 
         String jsonString = readFromAssets("json1.json");
+
+        Gson gson = new Gson();
+        Order order = gson.fromJson(jsonString, Order.class);
+
         textView = findViewById(R.id.afisareJson);
-        textView.setText(jsonString);
+        textView.setText(order.getCreatedAt());
     }
 
     public String readFromAssets(String fileName) {
