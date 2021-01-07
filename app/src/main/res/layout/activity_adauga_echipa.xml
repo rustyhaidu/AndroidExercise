@@ -4,75 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activitati.Activity2">
+    tools:context=".activitati.AdaugareEchipa">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="108dp"
-        android:layout_height="40dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/echipa1"
+    <EditText
+        android:id="@+id/teamname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nume echipa"
+        app:layout_constraintBottom_toTopOf="@+id/coachName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/coachName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nume antrenor"
+        app:layout_constraintBottom_toTopOf="@+id/adaugaEchipaLaDB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/acronimEchipa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Acronim Tara"
+        app:layout_constraintBottom_toTopOf="@+id/teamname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.641" />
-
-    <EditText
-        android:id="@+id/echipa1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Echipa 1"
-        app:layout_constraintBottom_toTopOf="@+id/echipa2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/echipa2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Echipa 2"
-        app:layout_constraintBottom_toTopOf="@+id/scorul"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/scorul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Scorul"
-        app:layout_constraintBottom_toTopOf="@+id/adaugaLaLista"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/adaugaLaLista"
+        android:id="@+id/adaugaEchipaLaDB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="304dp"
-        android:text="Adauga la Lista"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Adauga Echipa la DB"
+        app:layout_constraintBottom_toTopOf="@+id/afisareEchipePrezente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/afiseazaMeciuri"
+        android:id="@+id/afisareEchipePrezente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="240dp"
-        android:text="AfiseazaMeciuri"
+        android:layout_marginBottom="172dp"
+        android:text="Afisare Echipe Prezente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

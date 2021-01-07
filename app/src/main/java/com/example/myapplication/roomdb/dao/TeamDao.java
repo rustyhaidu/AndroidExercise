@@ -7,29 +7,30 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import com.example.myapplication.model.livescore.Game;
+import com.example.myapplication.model.livescore.Team;
 
 import java.util.List;
 
 import static androidx.room.OnConflictStrategy.REPLACE;
 
 @Dao
-public interface GameDao {
+public interface TeamDao {
 
     // insert query
     @Insert(onConflict = REPLACE)
-    void insert(Game game);
+    void insert(Team team);
 
     // delete
     @Delete
-    void delete(Game game);
+    void delete(Team team);
 
     @Delete
-    void reset(List<Game> gameList);
+    void reset(List<Team> teamList);
 
     @Update
-    void update(Game game);
+    void update(Team team);
 
-    @Query("Select * from game")
-    public List<Game> getGameList();
+    @Query("Select * from team")
+    public List<Team> getTeamList();
 
 }

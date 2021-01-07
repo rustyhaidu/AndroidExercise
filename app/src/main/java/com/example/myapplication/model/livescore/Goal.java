@@ -1,7 +1,9 @@
 package com.example.myapplication.model.livescore;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.PrimaryKey;
 
 @Entity(tableName = "goal", foreignKeys = {
         @ForeignKey(
@@ -19,26 +21,23 @@ import androidx.room.ForeignKey;
 })
 
 public class Goal {
-    private String matchId;
+    @PrimaryKey(autoGenerate = false)
+    private int matchId;
+    @ColumnInfo(name = "teamId")
     private String teamId;
+    @ColumnInfo(name = "player")
     private String player;
+    @ColumnInfo(name = "gtime")
     private String gtime;
 
     public Goal() {
     }
 
-    public Goal(String matchId, String teamId, String player, String gtime) {
-        this.matchId = matchId;
-        this.teamId = teamId;
-        this.player = player;
-        this.gtime = gtime;
-    }
-
-    public String getMatchId() {
+    public int getMatchId() {
         return matchId;
     }
 
-    public void setMatchId(String matchId) {
+    public void setMatchId(int matchId) {
         this.matchId = matchId;
     }
 

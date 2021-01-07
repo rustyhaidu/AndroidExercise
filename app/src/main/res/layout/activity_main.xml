@@ -35,28 +35,41 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:text="Press me"
-        app:layout_constraintBottom_toTopOf="@+id/nextActivity"
+        app:layout_constraintBottom_toTopOf="@+id/adaugaMeci"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/nextActivity"
+        android:id="@+id/adaugaMeci"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next Acttivity"
-        app:layout_constraintBottom_toTopOf="@+id/jsonButton"
+        android:layout_marginBottom="4dp"
+        android:text="Adauga Meci"
+        app:layout_constraintBottom_toTopOf="@+id/adaugaEchipa"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/jsonButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="276dp"
+        android:layout_marginBottom="256dp"
         android:text="JSON"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/adaugaEchipa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Adauga Echipa"
+        app:layout_constraintBottom_toTopOf="@+id/jsonButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

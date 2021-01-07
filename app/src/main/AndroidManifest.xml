@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".activitati.HomeActivity"></activity>
+        <activity android:name=".activitati.AfisareEchipePrezente"></activity>
+        <activity android:name=".activitati.AdaugareEchipa" />
+        <activity android:name=".activitati.HomeActivity" />
         <activity android:name=".activitati.JsonActivity" />
         <activity android:name=".activitati.AfisareMeciuri" />
-        <activity android:name=".activitati.Activity2" />
+        <activity android:name=".activitati.AdaugareMeci" />
         <activity android:name=".activitati.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

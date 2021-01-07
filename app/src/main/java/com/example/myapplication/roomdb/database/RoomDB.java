@@ -9,8 +9,11 @@ import androidx.room.RoomDatabase;
 import com.example.myapplication.model.livescore.Game;
 import com.example.myapplication.model.livescore.Goal;
 import com.example.myapplication.model.livescore.Team;
+import com.example.myapplication.roomdb.dao.GameDao;
+import com.example.myapplication.roomdb.dao.GoalDao;
+import com.example.myapplication.roomdb.dao.TeamDao;
 
-@Database(entities = {Game.class, Goal.class, Team.class}, version = 1, exportSchema = false)
+@Database(entities = {Game.class, Goal.class, Team.class}, version = 2, exportSchema = false)
 public abstract class RoomDB extends RoomDatabase {
     // Create database instance
     private static RoomDB database;
@@ -30,4 +33,9 @@ public abstract class RoomDB extends RoomDatabase {
         }
         return database;
     }
+
+    // Create Dao
+    public abstract GameDao gameDao();
+    public abstract GoalDao goalDao();
+    public abstract TeamDao teamDao();
 }

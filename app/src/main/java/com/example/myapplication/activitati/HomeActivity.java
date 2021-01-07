@@ -2,9 +2,7 @@ package com.example.myapplication.activitati;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +15,8 @@ import java.util.Random;
 
 public class HomeActivity extends AppCompatActivity {
     Button pressMe;
-    Button nextActivity;
+    Button adaugaMeci;
+    Button adaugaEchipa;
     Button jsonActivity;
     TextView label;
     EditText editText;
@@ -29,7 +28,8 @@ public class HomeActivity extends AppCompatActivity {
 
         pressMe = findViewById(R.id.button);
         label = findViewById(R.id.textView);
-        nextActivity = findViewById(R.id.nextActivity);
+        adaugaMeci = findViewById(R.id.adaugaMeci);
+        adaugaEchipa = findViewById(R.id.adaugaEchipa);
         editText = findViewById(R.id.editText);
         jsonActivity = findViewById(R.id.jsonButton);
 
@@ -46,12 +46,20 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        nextActivity.setOnClickListener(new View.OnClickListener() {
+        adaugaMeci.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String text = editText.getText().toString();
-                Intent intent = new Intent(getApplicationContext(), Activity2.class);
+                Intent intent = new Intent(getApplicationContext(), AdaugareMeci.class);
                 intent.putExtra("cheie", text);
+                startActivity(intent);
+            }
+        });
+
+        adaugaEchipa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), AdaugareEchipa.class);
                 startActivity(intent);
             }
         });

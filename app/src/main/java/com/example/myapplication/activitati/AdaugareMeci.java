@@ -12,15 +12,18 @@ import android.widget.Toast;
 
 import com.example.myapplication.R;
 import com.example.myapplication.model.example.Scor;
+import com.example.myapplication.model.livescore.Game;
+import com.example.myapplication.roomdb.dao.GameDao;
+import com.example.myapplication.roomdb.database.RoomDB;
 
 import java.util.ArrayList;
 
-public class Activity2 extends AppCompatActivity {
+public class AdaugareMeci extends AppCompatActivity {
     TextView textView;
     EditText echipa1;
     EditText echipa2;
     EditText scorul;
-    Button adaugaLaLista;
+    Button adaugaInDB;
     Button afiseazaMeciuri;
 
     static ArrayList<Scor> scoruri = new ArrayList<>();
@@ -28,19 +31,19 @@ public class Activity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity2);
+        setContentView(R.layout.adauga_meci);
 
         textView = findViewById(R.id.textView2);
         String text = getIntent().getExtras().getString("cheie");
         textView.setText(text);
 
-        echipa1 = findViewById(R.id.echipa1);
-        echipa2 = findViewById(R.id.echipa2);
-        scorul = findViewById(R.id.scorul);
-        adaugaLaLista = findViewById(R.id.adaugaLaLista);
+        echipa1 = findViewById(R.id.meciData);
+        echipa2 = findViewById(R.id.meciStadion);
+        scorul = findViewById(R.id.meciTeam1);
+        adaugaInDB = findViewById(R.id.adaugaLaLista);
         afiseazaMeciuri = findViewById(R.id.afiseazaMeciuri);
 
-        adaugaLaLista.setOnClickListener(new View.OnClickListener() {
+        adaugaInDB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String echipa1Text = echipa1.getText().toString();
@@ -51,7 +54,19 @@ public class Activity2 extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Compleaaza toate field-urile", Toast.LENGTH_SHORT).show();
                 } else {
                     Scor scor = new Scor(echipa1Text, echipa2Text, scorText);
-                    scoruri.add(scor);
+                    // scoruri.add(scor);
+
+                    RoomDB database = RoomDB.getInstance(getApplicationContext());
+                    GameDao gameDao = database.gameDao();
+
+                    Game game = new Game();
+                    game.setMdate("2020-01-10");
+                    game.setStadium("Barca");
+                    game.setTeam1("ROM");
+                    game.setTeam2("PLK");
+
+                    gameDao.insert(game);
+
                 }
 
             }

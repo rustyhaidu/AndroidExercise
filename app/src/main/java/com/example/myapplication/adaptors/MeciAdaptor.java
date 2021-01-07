@@ -11,44 +11,50 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.myapplication.R;
-import com.example.myapplication.model.example.Scor;
+import com.example.myapplication.model.livescore.Game;
 
-import java.util.ArrayList;
+import java.util.List;
 
-public class MeciAdaptor extends ArrayAdapter<Scor> {
+public class MeciAdaptor extends ArrayAdapter<Game> {
 
-    private ArrayList<Scor> scoruri;
+    private List<Game> games;
     Context mContext;
 
-    private static class ViewHolder {
-        TextView echipa1;
-        TextView echipa2;
-        TextView scor;
-    }
-
-
-    public MeciAdaptor(@NonNull Context context, int resource, @NonNull ArrayList<Scor> objects) {
+    public MeciAdaptor(@NonNull Context context, int resource, @NonNull List<Game> objects) {
         super(context, resource, objects);
-        this.scoruri = objects;
         this.mContext = context;
+        this.games = objects;
     }
+
+
+    private static class ViewHolder {
+        TextView gameId;
+        TextView mdate;
+        TextView team1;
+        TextView team2;
+        TextView stadium;
+    }
+
+
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        Scor scor = getItem(position);
+        Game game = getItem(position);
         ViewHolder viewHolder;
         final View result;
 
         if (convertView == null) {
             viewHolder = new ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(getContext());
-            convertView = inflater.inflate(R.layout.item, parent, false);
+            convertView = inflater.inflate(R.layout.item_meci, parent, false);
 
-            viewHolder.echipa1 = convertView.findViewById(R.id.echipa1Item);
-            viewHolder.echipa2 = convertView.findViewById(R.id.echipa2Item);
-            viewHolder.scor = convertView.findViewById(R.id.scorItem);
+            viewHolder.gameId = convertView.findViewById(R.id.idMeci);
+            viewHolder.mdate = convertView.findViewById(R.id.numeEchipa);
+            viewHolder.team1 = convertView.findViewById(R.id.team1);
+            viewHolder.team2 = convertView.findViewById(R.id.team2);
+            viewHolder.stadium = convertView.findViewById(R.id.numeAntrenor);
 
             result = convertView;
             convertView.setTag(viewHolder);
@@ -57,9 +63,11 @@ public class MeciAdaptor extends ArrayAdapter<Scor> {
             result = convertView;
         }
 
-        viewHolder.echipa1.setText(scor.getEchipa1());
-        viewHolder.echipa2.setText(scor.getEchipa2());
-        viewHolder.scor.setText(scor.getScor());
+        viewHolder.gameId.setText(game.getId());
+        viewHolder.mdate.setText(game.getMdate());
+        viewHolder.team1.setText(game.getTeam1());
+        viewHolder.team2.setText(game.getTeam2());
+        viewHolder.stadium.setText(game.getStadium());
 
         return result;
     }

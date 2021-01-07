@@ -1,13 +1,15 @@
 package com.example.myapplication.model.livescore;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "eteam")
+@Entity(tableName = "team")
 public class Team {
 
     @PrimaryKey(autoGenerate = false)
+    @NonNull
     private String id;
     @ColumnInfo(name = "teamname")
     private String teamname;
@@ -15,12 +17,6 @@ public class Team {
     private String coach;
 
     public Team() {
-    }
-
-    public Team(String id, String teamname, String coach) {
-        this.id = id;
-        this.teamname = teamname;
-        this.coach = coach;
     }
 
     public String getId() {

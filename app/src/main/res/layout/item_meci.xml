@@ -6,29 +6,48 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/echipa1Item"
+        android:id="@+id/idMeci"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="PHMeci"
         android:layout_margin="10dp"
         tools:layout_editor_absoluteX="9dp"
         tools:layout_editor_absoluteY="12dp" />
 
     <TextView
-        android:id="@+id/echipa2Item"
+        android:id="@+id/dataMeci"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="PHData"
         android:layout_margin="10dp"
         tools:layout_editor_absoluteX="87dp"
         tools:layout_editor_absoluteY="12dp" />
 
     <TextView
-        android:id="@+id/scorItem"
+        android:id="@+id/numeStadion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="PHStation"
         android:layout_margin="10dp"
         tools:layout_editor_absoluteX="170dp"
         tools:layout_editor_absoluteY="11dp" />
+
+    <TextView
+        android:id="@+id/team1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PHTeam1"
+        android:layout_margin="10dp"
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="11dp" />
+
+    <TextView
+        android:id="@+id/team2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PHTeam2"
+        android:layout_margin="10dp"
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="11dp" />
+
 </LinearLayout>

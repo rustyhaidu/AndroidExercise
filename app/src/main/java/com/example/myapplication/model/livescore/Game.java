@@ -5,8 +5,20 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "game", foreignKeys = @ForeignKey(entity = Team.class, parentColumns = "id",
-        childColumns = {"team1", "team2"}, onDelete = ForeignKey.CASCADE))
+@Entity(tableName = "game", foreignKeys = {
+        @ForeignKey(
+                entity = Team.class,
+                parentColumns = "id",
+                childColumns = "team1",
+                onDelete = ForeignKey.CASCADE
+        ),
+        @ForeignKey(
+                entity = Team.class,
+                parentColumns = "id",
+                childColumns = "team2",
+                onDelete = ForeignKey.CASCADE
+        )
+})
 public class Game {
     @PrimaryKey(autoGenerate = true)
     private int id;
@@ -21,14 +33,6 @@ public class Game {
     private String team2;
 
     public Game() {
-    }
-
-    public Game(int id, String mdate, String stadium, String team1, String team2) {
-        this.id = id;
-        this.mdate = mdate;
-        this.stadium = stadium;
-        this.team1 = team1;
-        this.team2 = team2;
     }
 
     public int getId() {
