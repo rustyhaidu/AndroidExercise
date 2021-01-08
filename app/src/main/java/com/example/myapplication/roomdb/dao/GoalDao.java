@@ -30,7 +30,7 @@ public interface GoalDao {
     @Update
     void update(Goal goal);
 
-    /*@Query("Select * from goal")
-    public List<Game> getGoalList();*/
+    @Query("Select * from goal")
+    List<Goal> getGoalList();
 
 }

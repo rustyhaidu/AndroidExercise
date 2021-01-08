@@ -6,28 +6,31 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import com.example.myapplication.R;
+import com.example.myapplication.adaptors.GolAdaptor;
 import com.example.myapplication.adaptors.MeciAdaptor;
 import com.example.myapplication.model.livescore.Game;
+import com.example.myapplication.model.livescore.Goal;
 import com.example.myapplication.roomdb.dao.GameDao;
+import com.example.myapplication.roomdb.dao.GoalDao;
 import com.example.myapplication.roomdb.database.RoomDB;
 
 import java.util.List;
 
-public class AfisareMeciuri extends AppCompatActivity {
+public class AfisareGoluri extends AppCompatActivity {
     private ListView listView;
-    private MeciAdaptor meciAdaptor;
+    private GolAdaptor golAdaptor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_afisare_meciuri);
+        setContentView(R.layout.activity_afisare_goluri);
 
         RoomDB database = RoomDB.getInstance(getApplicationContext());
-        GameDao gameDao = database.gameDao();
-        listView = findViewById(R.id.listViewMeciuri);
+        GoalDao goalDao = database.goalDao();
+        listView = findViewById(R.id.listViewGoluri);
 
-        List<Game> games = gameDao.getGameList();
-        meciAdaptor = new MeciAdaptor(getApplicationContext(), R.layout.item_meci, games);
-        listView.setAdapter(meciAdaptor);
+        List<Goal> goals = goalDao.getGoalList();
+        golAdaptor = new GolAdaptor(getApplicationContext(), R.layout.item_gol, goals);
+        listView.setAdapter(golAdaptor);
     }
 }

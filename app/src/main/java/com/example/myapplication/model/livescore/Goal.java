@@ -14,14 +14,16 @@ import androidx.room.PrimaryKey;
         ),
         @ForeignKey(
                 entity = Game.class,
-                parentColumns = "id",
+                parentColumns = "matchId",
                 childColumns = "matchId",
                 onDelete = ForeignKey.CASCADE
         )
 })
 
 public class Goal {
-    @PrimaryKey(autoGenerate = false)
+    @PrimaryKey(autoGenerate = true)
+    private int id;
+    @ColumnInfo(name = "matchId")
     private int matchId;
     @ColumnInfo(name = "teamId")
     private String teamId;
@@ -63,5 +65,13 @@ public class Goal {
 
     public void setGtime(String gtime) {
         this.gtime = gtime;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

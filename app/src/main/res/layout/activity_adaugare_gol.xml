@@ -4,82 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activitati.HomeActivity">
-
-    <Button
-        android:id="@+id/adaugaGol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Adauga Gol"
-        app:layout_constraintBottom_toTopOf="@+id/jsonButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="94dp"
-        android:layout_height="46dp"
-        android:text="Label"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.877" />
+    tools:context=".activitati.AdaugareGolActivity">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/idMeciGoal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:ems="10"
-        android:hint="Name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/pressme"
+        android:hint="Id meci"
+        app:layout_constraintBottom_toTopOf="@+id/goalTeamname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.965" />
+
+    <EditText
+        android:id="@+id/goalTeamname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nume Echipa (3 litere)"
+        app:layout_constraintBottom_toTopOf="@+id/numeJucatorMarcant"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/pressme"
+    <EditText
+        android:id="@+id/numeJucatorMarcant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="Press me"
-        app:layout_constraintBottom_toTopOf="@+id/adaugaMeci"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nume Jucator"
+        app:layout_constraintBottom_toTopOf="@+id/minutulInscrierii"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/minutulInscrierii"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Minut Inscriere"
+        app:layout_constraintBottom_toTopOf="@+id/salvareGol"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/adaugaMeci"
+        android:id="@+id/salvareGol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Adauga Meci"
-        app:layout_constraintBottom_toTopOf="@+id/adaugaEchipa"
+        android:text="Salveaza Gol"
+        app:layout_constraintBottom_toTopOf="@+id/afiseazaGoluri"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/jsonButton"
+        android:id="@+id/afiseazaGoluri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="232dp"
-        android:text="JSON"
+        android:layout_marginBottom="92dp"
+        android:text="Afiseaza Goluri"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/adaugaEchipa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Adauga Echipa"
-        app:layout_constraintBottom_toTopOf="@+id/adaugaGol"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

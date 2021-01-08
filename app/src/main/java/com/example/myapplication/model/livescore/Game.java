@@ -21,7 +21,8 @@ import androidx.room.PrimaryKey;
 })
 public class Game {
     @PrimaryKey(autoGenerate = true)
-    private int id;
+    @ColumnInfo(name = "matchId")
+    private int matchId;
     @ColumnInfo(name = "mdate")
     private String mdate;
     @ColumnInfo(name = "stadium")
@@ -35,12 +36,12 @@ public class Game {
     public Game() {
     }
 
-    public int getId() {
-        return id;
+    public int getMatchId() {
+        return matchId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setMatchId(int matchId) {
+        this.matchId = matchId;
     }
 
     public String getMdate() {

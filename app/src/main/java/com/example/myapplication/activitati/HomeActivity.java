@@ -18,6 +18,7 @@ public class HomeActivity extends AppCompatActivity {
     Button adaugaMeci;
     Button adaugaEchipa;
     Button jsonActivity;
+    Button adaugaGol;
     TextView label;
     EditText editText;
 
@@ -26,14 +27,12 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        pressMe = findViewById(R.id.button);
+        pressMe = findViewById(R.id.pressme);
         label = findViewById(R.id.textView);
         adaugaMeci = findViewById(R.id.adaugaMeci);
         adaugaEchipa = findViewById(R.id.adaugaEchipa);
         editText = findViewById(R.id.editText);
         jsonActivity = findViewById(R.id.jsonButton);
-
-
 
         pressMe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +67,15 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), JsonActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        adaugaGol = findViewById(R.id.adaugaGol);
+        adaugaGol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), AdaugareGolActivity.class);
                 startActivity(intent);
             }
         });

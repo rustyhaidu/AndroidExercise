@@ -13,7 +13,7 @@ import com.example.myapplication.roomdb.dao.GameDao;
 import com.example.myapplication.roomdb.dao.GoalDao;
 import com.example.myapplication.roomdb.dao.TeamDao;
 
-@Database(entities = {Game.class, Goal.class, Team.class}, version = 2, exportSchema = false)
+@Database(entities = {Game.class, Goal.class, Team.class}, version = 4, exportSchema = false)
 public abstract class RoomDB extends RoomDatabase {
     // Create database instance
     private static RoomDB database;
