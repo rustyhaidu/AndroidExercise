@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplication.R;
-import com.example.myapplication.model.example.Scor;
 import com.example.myapplication.model.livescore.Game;
 import com.example.myapplication.roomdb.dao.GameDao;
 import com.example.myapplication.roomdb.database.RoomDB;
