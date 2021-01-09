@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".activitati.AfisareGoluri"></activity>
+        <activity android:name=".activitati.TransferValoare"></activity>
+        <activity android:name=".activitati.ImageActivity" />
+        <activity android:name=".activitati.AfisareGoluri" />
         <activity android:name=".activitati.AdaugareGolActivity" />
         <activity android:name=".activitati.AfisareEchipePrezente" />
         <activity android:name=".activitati.AdaugareEchipa" />

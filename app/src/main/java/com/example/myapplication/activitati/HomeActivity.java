@@ -1,56 +1,51 @@
 package com.example.myapplication.activitati;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.R;
 
-import java.util.Random;
-
 public class HomeActivity extends AppCompatActivity {
-    Button pressMe;
     Button adaugaMeci;
     Button adaugaEchipa;
     Button jsonActivity;
     Button adaugaGol;
-    TextView label;
-    EditText editText;
+    Button displayImages;
+    Button transferValueBt;
+    EditText transferET;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        pressMe = findViewById(R.id.pressme);
-        label = findViewById(R.id.textView);
         adaugaMeci = findViewById(R.id.adaugaMeci);
         adaugaEchipa = findViewById(R.id.adaugaEchipa);
-        editText = findViewById(R.id.editText);
         jsonActivity = findViewById(R.id.jsonButton);
+        displayImages = findViewById(R.id.images);
+        transferValueBt = findViewById(R.id.transferValueButton);
+        transferET = findViewById(R.id.transferValue);
 
-        pressMe.setOnClickListener(new View.OnClickListener() {
+        transferValueBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Random random = new Random();
-                int nrRandom = random.nextInt(1000);
-                label.setText("Numar: " + nrRandom);
-
-
+                String textToTransfer = transferET.getText().toString();
+                Intent intent = new Intent(getApplicationContext(), TransferValoare.class);
+                intent.putExtra("key", textToTransfer);
+                startActivity(intent);
             }
         });
+
 
         adaugaMeci.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String text = editText.getText().toString();
                 Intent intent = new Intent(getApplicationContext(), AdaugareMeci.class);
-                intent.putExtra("cheie", text);
                 startActivity(intent);
             }
         });
@@ -76,6 +71,14 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), AdaugareGolActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        displayImages.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ImageActivity.class);
                 startActivity(intent);
             }
         });

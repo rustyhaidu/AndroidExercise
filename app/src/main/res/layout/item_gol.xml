@@ -10,7 +10,7 @@
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Meci id"
+        android:text="@string/meci_id"
         tools:layout_editor_absoluteX="9dp"
         tools:layout_editor_absoluteY="12dp" />
 
@@ -19,7 +19,7 @@
         android:layout_width="72dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Team name"
+        android:text="@string/team_name"
         tools:layout_editor_absoluteX="9dp"
         tools:layout_editor_absoluteY="12dp" />
 
@@ -37,7 +37,7 @@
         android:layout_width="74dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Minut"
+        android:text="@string/minut"
         tools:layout_editor_absoluteX="9dp"
         tools:layout_editor_absoluteY="12dp" />
 </LinearLayout>

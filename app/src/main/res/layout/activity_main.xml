@@ -8,78 +8,76 @@
 
     <Button
         android:id="@+id/adaugaGol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Adauga Gol"
+        android:layout_width="166dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/adauga_gol"
         app:layout_constraintBottom_toTopOf="@+id/jsonButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="94dp"
-        android:layout_height="46dp"
-        android:text="Label"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.877" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/pressme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/pressme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="Press me"
-        app:layout_constraintBottom_toTopOf="@+id/adaugaMeci"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/adaugaMeci"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Adauga Meci"
+        android:layout_width="166dp"
+        android:layout_height="42dp"
+        android:text="@string/adauga_meci"
         app:layout_constraintBottom_toTopOf="@+id/adaugaEchipa"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/jsonButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="232dp"
-        android:text="JSON"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="166dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/json"
+        app:layout_constraintBottom_toTopOf="@+id/images"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/adaugaEchipa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Adauga Echipa"
+        android:layout_width="166dp"
+        android:layout_height="42dp"
+        android:text="@string/adauga_echipa"
         app:layout_constraintBottom_toTopOf="@+id/adaugaGol"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/images"
+        android:layout_width="166dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="152dp"
+        android:text="@string/images"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/transferValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/to_transfer_activity"
+        app:layout_constraintBottom_toTopOf="@+id/transferValueButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/transferValueButton"
+        android:layout_width="166dp"
+        android:layout_height="42dp"
+        android:text="@string/transfer_valoare"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/adaugaMeci"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,7 @@
         android:id="@+id/idEchipa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/id_echipa"
         android:layout_margin="10dp"
         tools:layout_editor_absoluteX="9dp"
         tools:layout_editor_absoluteY="12dp" />
@@ -18,7 +18,7 @@
         android:id="@+id/numeEchipa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/nume_echipa"
         android:layout_margin="10dp"
         tools:layout_editor_absoluteX="87dp"
         tools:layout_editor_absoluteY="12dp" />
@@ -27,7 +27,7 @@
         android:id="@+id/numeAntrenor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/nume_antrenor"
         android:layout_margin="10dp"
         tools:layout_editor_absoluteX="170dp"
         tools:layout_editor_absoluteY="11dp" />

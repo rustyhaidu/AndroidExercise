@@ -9,7 +9,7 @@
         android:id="@+id/idMeci"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PHMeci"
+        android:text="@string/phmeci"
         android:layout_margin="10dp"
         tools:layout_editor_absoluteX="9dp"
         tools:layout_editor_absoluteY="12dp" />
@@ -18,7 +18,7 @@
         android:id="@+id/dataMeci"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PHData"
+        android:text="@string/phdata"
         android:layout_margin="10dp"
         tools:layout_editor_absoluteX="87dp"
         tools:layout_editor_absoluteY="12dp" />
@@ -36,7 +36,7 @@
         android:id="@+id/team1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PHTeam1"
+        android:text="@string/phteam1"
         android:layout_margin="10dp"
         tools:layout_editor_absoluteX="170dp"
         tools:layout_editor_absoluteY="11dp" />
@@ -45,7 +45,7 @@
         android:id="@+id/team2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PHTeam2"
+        android:text="@string/phteam2"
         android:layout_margin="10dp"
         tools:layout_editor_absoluteX="170dp"
         tools:layout_editor_absoluteY="11dp" />
