@@ -11,14 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/id_meci"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/goalTeamname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.965" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/goalTeamname"
@@ -59,8 +57,8 @@
 
     <Button
         android:id="@+id/salvareGol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="165dp"
+        android:layout_height="49dp"
         android:text="@string/salveaza_gol"
         app:layout_constraintBottom_toTopOf="@+id/afiseazaGoluri"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,9 +68,40 @@
         android:id="@+id/afiseazaGoluri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
         android:text="@string/afiseaza_goluri"
+        app:layout_constraintBottom_toTopOf="@+id/stergeGol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/stergeGol"
+        android:layout_width="167dp"
+        android:layout_height="45dp"
+        android:text="@string/sterge_dupa_id"
+        app:layout_constraintBottom_toTopOf="@+id/modificaGol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/idGol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/id_gol"
+        app:layout_constraintBottom_toTopOf="@+id/idMeciGoal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/modificaGol"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="100dp"
+        android:text="Modifica Gol"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

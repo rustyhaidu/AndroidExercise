@@ -16,23 +16,61 @@ import com.example.myapplication.roomdb.database.RoomDB;
 
 public class AdaugareGolActivity extends AppCompatActivity {
     EditText matchId;
+    EditText idGol;
     EditText teamname;
     EditText player;
     EditText gtime;
     Button saveGol;
     Button afiseazaGoluri;
+    Button stergeGol;
+    Button modificaGol;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adaugare_gol);
 
+        RoomDB database = RoomDB.getInstance(getApplicationContext());
+        GoalDao goalDao = database.goalDao();
+
+        idGol = findViewById(R.id.idGol);
         matchId = findViewById(R.id.idMeciGoal);
         teamname = findViewById(R.id.goalTeamname);
         player = findViewById(R.id.numeJucatorMarcant);
         gtime = findViewById(R.id.minutulInscrierii);
         saveGol = findViewById(R.id.salvareGol);
         afiseazaGoluri = findViewById(R.id.afiseazaGoluri);
+
+        stergeGol = findViewById(R.id.stergeGol);
+        modificaGol = findViewById(R.id.modificaGol);
+
+        stergeGol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Goal goal = goalDao.getGoalById(Integer.parseInt(idGol.getText().toString()));
+                goalDao.delete(goal);
+            }
+        });
+
+        modificaGol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Goal goal = goalDao.getGoalById(Integer.parseInt(idGol.getText().toString()));
+
+                String meciId = matchId.getText().toString();
+                String numeEchipa = teamname.getText().toString();
+                String numeJucator = player.getText().toString();
+                String minutInscriere = gtime.getText().toString();
+
+                goal.setMatchId(Integer.parseInt(meciId));
+                goal.setTeamId(numeEchipa);
+                goal.setPlayer(numeJucator);
+                goal.setGtime(minutInscriere);
+
+                goalDao.update(goal);
+            }
+        });
 
         saveGol.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,16 +80,13 @@ public class AdaugareGolActivity extends AppCompatActivity {
                 String numeJucator = player.getText().toString();
                 String minutInscriere = gtime.getText().toString();
 
-                RoomDB database = RoomDB.getInstance(getApplicationContext());
-                GoalDao gameDao = database.goalDao();
-
                 Goal goal = new Goal();
                 goal.setMatchId(Integer.parseInt(meciId));
                 goal.setTeamId(numeEchipa);
                 goal.setPlayer(numeJucator);
                 goal.setGtime(minutInscriere);
 
-                gameDao.insert(goal);
+                goalDao.insert(goal);
             }
         });
 

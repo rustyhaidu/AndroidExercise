@@ -33,4 +33,7 @@ public interface GoalDao {
     @Query("Select * from goal")
     List<Goal> getGoalList();
 
+    @Query("Select * from goal where id =:id")
+    Goal getGoalById(int id);
+
 }

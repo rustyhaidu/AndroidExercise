@@ -38,4 +38,7 @@
     <string name="transfer_valoare">Transfer valoare</string>
     <string name="to_transfer_activity">To Transfer activity</string>
     <string name="placeholder">Placeholder</string>
+    <string name="sterge_dupa_id">Sterge dupa id</string>
+    <string name="id_gol">Id gol</string>
+    <string name="gol_id">Gol Id</string>
 </resources>

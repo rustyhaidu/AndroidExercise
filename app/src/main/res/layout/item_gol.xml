@@ -6,8 +6,17 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/golId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/gol_id"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="12dp" />
+
+    <TextView
         android:id="@+id/meciGolid"
-        android:layout_width="70dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="@string/meci_id"

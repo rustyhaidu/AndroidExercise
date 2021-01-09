@@ -29,6 +29,7 @@ public class GolAdaptor extends ArrayAdapter<Goal> {
 
 
     private static class ViewHolder {
+        TextView goalId;
         TextView matchId;
         TextView teamId;
         TextView player;
@@ -49,6 +50,7 @@ public class GolAdaptor extends ArrayAdapter<Goal> {
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.item_gol, parent, false);
 
+            viewHolder.goalId = convertView.findViewById(R.id.golId);
             viewHolder.matchId = convertView.findViewById(R.id.meciGolid);
             viewHolder.teamId = convertView.findViewById(R.id.golTeamname);
             viewHolder.player = convertView.findViewById(R.id.golPlayer);
@@ -62,6 +64,7 @@ public class GolAdaptor extends ArrayAdapter<Goal> {
             result = convertView;
         }
 
+        viewHolder.goalId.setText(String.valueOf(goal.getId()));
         viewHolder.matchId.setText(String.valueOf(goal.getMatchId()));
         viewHolder.teamId.setText(goal.getTeamId());
         viewHolder.player.setText(goal.getPlayer());
