@@ -52,8 +52,18 @@
         android:id="@+id/images"
         android:layout_width="166dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="152dp"
         android:text="@string/images"
+        app:layout_constraintBottom_toTopOf="@+id/graphButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/graphButton"
+        android:layout_width="166dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="108dp"
+        android:text="@string/_2d_graph"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.53"

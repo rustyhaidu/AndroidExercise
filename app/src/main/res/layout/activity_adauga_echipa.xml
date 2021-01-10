@@ -53,7 +53,8 @@
         android:text="@string/adauga_echipa_la_db"
         app:layout_constraintBottom_toTopOf="@+id/afisareEchipePrezente"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background = "@drawable/roundedbutton"/>
 
     <Button
         android:id="@+id/afisareEchipePrezente"
@@ -63,5 +64,6 @@
         android:text="@string/afisare_echipe_prezente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background = "@drawable/roundedbutton"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

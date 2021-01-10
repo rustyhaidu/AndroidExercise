@@ -15,6 +15,7 @@ public class HomeActivity extends AppCompatActivity {
     Button adaugaEchipa;
     Button jsonActivity;
     Button adaugaGol;
+    Button graph;
     Button displayImages;
     Button transferValueBt;
     EditText transferET;
@@ -30,6 +31,15 @@ public class HomeActivity extends AppCompatActivity {
         displayImages = findViewById(R.id.images);
         transferValueBt = findViewById(R.id.transferValueButton);
         transferET = findViewById(R.id.transferValue);
+        graph = findViewById(R.id.graphButton);
+
+        graph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), GraphActivity.class);
+                startActivity(intent);
+            }
+        });
 
         transferValueBt.setOnClickListener(new View.OnClickListener() {
             @Override
